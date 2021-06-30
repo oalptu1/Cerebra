@@ -1,0 +1,1441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1" xmlns:comp="http://www.sbml.org/sbml/level3/version1/comp/version1" level="3" version="1" layout:required="false" comp:required="true">
+  <model id="Module_10" name="Long_Term_Potentiation" substanceUnits="substance" timeUnits="time" volumeUnits="volume" areaUnits="area" lengthUnits="length" extentUnits="substance">
+    <listOfUnitDefinitions>
+      <unitDefinition id="length" name="length">
+        <listOfUnits>
+          <unit kind="metre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="area" name="area">
+        <listOfUnits>
+          <unit kind="metre" exponent="2" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="volume" name="volume">
+        <listOfUnits>
+          <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="time" name="time">
+        <listOfUnits>
+          <unit kind="second" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="substance" name="substance">
+        <listOfUnits>
+          <unit kind="mole" exponent="1" scale="-6" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="cell" name="cell" spatialDimensions="3" size="1" units="litre" constant="true">
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:idRef="cell" comp:submodelRef="Calcium"/>
+          <comp:replacedElement comp:idRef="cell" comp:submodelRef="calmodulin"/>
+        </comp:listOfReplacedElements>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="Metabolite_1" name="Ca" compartment="cell" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <jcmc:speciesInfo xmlns:jcmc="http://www.copasi.org/Projects/JigCell_Model_Connector" jcmc:refName="Ca" jcmc:type="VisibleVariable"/>
+        </annotation>
+        <comp:listOfReplacedElements>
+          <comp:replacedElement comp:portRef="Ca" comp:submodelRef="Calcium"/>
+          <comp:replacedElement comp:portRef="Ca" comp:submodelRef="calmodulin"/>
+        </comp:listOfReplacedElements>
+      </species>
+    </listOfSpecies>
+    <layout:listOfLayouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:layout="http://www.sbml.org/sbml/level3/version1/layout/version1">
+      <layout:layout layout:id="Layout_0">
+        <layout:dimensions layout:width="0" layout:height="0"/>
+        <layout:listOfAdditionalGraphicalObjects>
+          <layout:generalGlyph layout:id="Long_Term_Potentiation_SubmoduleGlyph">
+            <layout:boundingBox>
+              <layout:position layout:x="0" layout:y="0"/>
+              <layout:dimensions layout:width="120" layout:height="100"/>
+            </layout:boundingBox>
+            <layout:listOfSubGlyphs>
+              <layout:compartmentGlyph layout:id="Long_Term_Potentiation_ContainerModuleGlyph">
+                <layout:boundingBox>
+                  <layout:position layout:x="25" layout:y="25"/>
+                  <layout:dimensions layout:width="661" layout:height="450"/>
+                </layout:boundingBox>
+              </layout:compartmentGlyph>
+              <layout:graphicalObject layout:id="Ca_VisibleVariableNodeGlyph">
+                <annotation>
+                  <jcmc:VisibleVariableNodeInfo xmlns:jcmc="http://www.copasi.org/Projects/JigCell_Model_Connector" jcmc:name="Ca" jcmc:vType="Species"/>
+                </annotation>
+                <layout:boundingBox>
+                  <layout:position layout:x="230" layout:y="90"/>
+                  <layout:dimensions layout:width="0" layout:height="0"/>
+                </layout:boundingBox>
+              </layout:graphicalObject>
+              <layout:generalGlyph layout:id="Calcium_SubmoduleGlyph">
+                <layout:boundingBox>
+                  <layout:position layout:x="60" layout:y="60"/>
+                  <layout:dimensions layout:width="120" layout:height="100"/>
+                </layout:boundingBox>
+                <layout:listOfSubGlyphs>
+                  <layout:compartmentGlyph layout:id="Calcium_ContainerModuleGlyph">
+                    <layout:boundingBox>
+                      <layout:position layout:x="25" layout:y="25"/>
+                      <layout:dimensions layout:width="661" layout:height="450"/>
+                    </layout:boundingBox>
+                  </layout:compartmentGlyph>
+                  <layout:graphicalObject layout:id="Ca_PortGlyph">
+                    <annotation>
+                      <jcmc:portInfo xmlns:jcmc="http://www.copasi.org/Projects/JigCell_Model_Connector" jcmc:refName="Ca" jcmc:id="Ca" jcmc:pType="Output" jcmc:vType="Species" jcmc:parentMod="Calcium"/>
+                    </annotation>
+                    <layout:boundingBox>
+                      <layout:position layout:x="1" layout:y="0.566666666666667"/>
+                      <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                  </layout:graphicalObject>
+                  <layout:graphicalObject layout:id="Ca1_PortGlyph">
+                    <annotation>
+                      <jcmc:portInfo xmlns:jcmc="http://www.copasi.org/Projects/JigCell_Model_Connector" jcmc:refName="Ca1" jcmc:id="Ca1" jcmc:pType="Input" jcmc:vType="Species" jcmc:parentMod="Calcium"/>
+                    </annotation>
+                    <layout:boundingBox>
+                      <layout:position layout:x="0" layout:y="0.677777777777778"/>
+                      <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                  </layout:graphicalObject>
+                  <layout:graphicalObject layout:id="Ca2_PortGlyph">
+                    <annotation>
+                      <jcmc:portInfo xmlns:jcmc="http://www.copasi.org/Projects/JigCell_Model_Connector" jcmc:refName="Ca2" jcmc:id="Ca2" jcmc:pType="Input" jcmc:vType="Species" jcmc:parentMod="Calcium"/>
+                    </annotation>
+                    <layout:boundingBox>
+                      <layout:position layout:x="0" layout:y="0.5"/>
+                      <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                  </layout:graphicalObject>
+                </layout:listOfSubGlyphs>
+              </layout:generalGlyph>
+              <layout:generalGlyph layout:id="calmodulin_SubmoduleGlyph">
+                <layout:boundingBox>
+                  <layout:position layout:x="325" layout:y="65"/>
+                  <layout:dimensions layout:width="120" layout:height="100"/>
+                </layout:boundingBox>
+                <layout:listOfSubGlyphs>
+                  <layout:compartmentGlyph layout:id="calmodulin_ContainerModuleGlyph">
+                    <layout:boundingBox>
+                      <layout:position layout:x="25" layout:y="25"/>
+                      <layout:dimensions layout:width="661" layout:height="450"/>
+                    </layout:boundingBox>
+                  </layout:compartmentGlyph>
+                  <layout:graphicalObject layout:id="Ca_PortGlyph">
+                    <annotation>
+                      <jcmc:portInfo xmlns:jcmc="http://www.copasi.org/Projects/JigCell_Model_Connector" jcmc:refName="Ca" jcmc:id="Ca" jcmc:pType="Input" jcmc:vType="Species" jcmc:parentMod="calmodulin"/>
+                    </annotation>
+                    <layout:boundingBox>
+                      <layout:position layout:x="0" layout:y="0.455555555555556"/>
+                      <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                  </layout:graphicalObject>
+                  <layout:graphicalObject layout:id="P10_PortGlyph">
+                    <annotation>
+                      <jcmc:portInfo xmlns:jcmc="http://www.copasi.org/Projects/JigCell_Model_Connector" jcmc:refName="P10" jcmc:id="P10" jcmc:pType="Output" jcmc:vType="Species" jcmc:parentMod="calmodulin"/>
+                    </annotation>
+                    <layout:boundingBox>
+                      <layout:position layout:x="1" layout:y="0.477777777777778"/>
+                      <layout:dimensions layout:width="0" layout:height="0"/>
+                    </layout:boundingBox>
+                  </layout:graphicalObject>
+                </layout:listOfSubGlyphs>
+              </layout:generalGlyph>
+            </layout:listOfSubGlyphs>
+          </layout:generalGlyph>
+        </layout:listOfAdditionalGraphicalObjects>
+      </layout:layout>
+    </layout:listOfLayouts>
+    <comp:listOfSubmodels>
+      <comp:submodel comp:id="Calcium" comp:name="Calcium" comp:modelRef="Module_11"/>
+      <comp:submodel comp:id="calmodulin" comp:name="calmodulin" comp:modelRef="Module_12"/>
+    </comp:listOfSubmodels>
+  </model>
+  <comp:listOfModelDefinitions>
+    <comp:modelDefinition id="Module_11" name="Calcium" substanceUnits="substance" timeUnits="time" volumeUnits="volume" areaUnits="area" lengthUnits="length" extentUnits="substance">
+      <listOfUnitDefinitions>
+        <unitDefinition id="length" name="length">
+          <listOfUnits>
+            <unit kind="metre" exponent="1" scale="0" multiplier="1"/>
+          </listOfUnits>
+        </unitDefinition>
+        <unitDefinition id="area" name="area">
+          <listOfUnits>
+            <unit kind="metre" exponent="2" scale="0" multiplier="1"/>
+          </listOfUnits>
+        </unitDefinition>
+        <unitDefinition id="volume" name="volume">
+          <listOfUnits>
+            <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+          </listOfUnits>
+        </unitDefinition>
+        <unitDefinition id="time" name="time">
+          <listOfUnits>
+            <unit kind="second" exponent="1" scale="0" multiplier="1"/>
+          </listOfUnits>
+        </unitDefinition>
+        <unitDefinition id="substance" name="substance">
+          <listOfUnits>
+            <unit kind="mole" exponent="1" scale="-6" multiplier="1"/>
+          </listOfUnits>
+        </unitDefinition>
+      </listOfUnitDefinitions>
+      <listOfCompartments>
+        <compartment id="cell" name="cell" spatialDimensions="3" size="1" units="litre" constant="true"/>
+      </listOfCompartments>
+      <listOfSpecies>
+        <species id="Metabolite_3" name="Ca" compartment="cell" initialConcentration="0.01" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+        <species id="Metabolite_5" name="Ca1" compartment="cell" initialConcentration="0.1" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+        <species id="Metabolite_7" name="Ca2" compartment="cell" initialConcentration="0.1" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      </listOfSpecies>
+      <listOfParameters>
+        <parameter id="_quantity_to_number_factor" name="&quot;quantity to number factor&quot;" value="6.02214179e+020" constant="true"/>
+        <parameter id="a" name="a" value="50" constant="false"/>
+      </listOfParameters>
+      <listOfRules>
+        <rateRule variable="Metabolite_3">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <cn> 5 </cn>
+                </apply>
+                <ci> Metabolite_3 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> a </ci>
+                <apply>
+                  <plus/>
+                  <cn> 1 </cn>
+                  <ci> Metabolite_5 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </rateRule>
+        <rateRule variable="Metabolite_5">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn> 100 </cn>
+              <ci> Metabolite_7 </ci>
+            </apply>
+          </math>
+        </rateRule>
+        <rateRule variable="Metabolite_7">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <minus/>
+                <cn> 100 </cn>
+              </apply>
+              <ci> Metabolite_5 </ci>
+            </apply>
+          </math>
+        </rateRule>
+      </listOfRules>
+      <listOfEvents>
+        <event id="Calcium_trigger" name="Calcium trigger" useValuesFromTriggerTime="false">
+          <trigger initialValue="true" persistent="true">
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <gt/>
+                <ci> Metabolite_3 </ci>
+                <cn> 0.04 </cn>
+              </apply>
+            </math>
+          </trigger>
+          <delay>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <cn> 5 </cn>
+            </math>
+          </delay>
+          <listOfEventAssignments>
+            <eventAssignment variable="a">
+              <math xmlns="http://www.w3.org/1998/Math/MathML">
+                <cn> 0 </cn>
+              </math>
+            </eventAssignment>
+          </listOfEventAssignments>
+        </event>
+      </listOfEvents>
+      <comp:listOfPorts>
+        <comp:port sboTerm="SBO:0000601" comp:idRef="Metabolite_3" comp:id="Ca" comp:name="Ca">
+          <annotation>
+            <jcmc:portInfo xmlns:jcmc="http://www.copasi.org/Projects/JigCell_Model_Connector" jcmc:refName="Ca" jcmc:pType="Output" jcmc:vType="Species"/>
+          </annotation>
+        </comp:port>
+        <comp:port sboTerm="SBO:0000600" comp:idRef="Metabolite_5" comp:id="Ca1" comp:name="Ca1">
+          <annotation>
+            <jcmc:portInfo xmlns:jcmc="http://www.copasi.org/Projects/JigCell_Model_Connector" jcmc:refName="Ca1" jcmc:pType="Input" jcmc:vType="Species"/>
+          </annotation>
+        </comp:port>
+        <comp:port sboTerm="SBO:0000600" comp:idRef="Metabolite_7" comp:id="Ca2" comp:name="Ca2">
+          <annotation>
+            <jcmc:portInfo xmlns:jcmc="http://www.copasi.org/Projects/JigCell_Model_Connector" jcmc:refName="Ca2" jcmc:pType="Input" jcmc:vType="Species"/>
+          </annotation>
+        </comp:port>
+      </comp:listOfPorts>
+    </comp:modelDefinition>
+    <comp:modelDefinition id="Module_12" name="calmodulin" substanceUnits="substance" timeUnits="time" volumeUnits="volume" areaUnits="area" lengthUnits="length" extentUnits="substance">
+      <listOfFunctionDefinitions>
+        <functionDefinition id="Rxn2" name="Rxn2">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <lambda>
+              <bvar>
+                <ci> A1 </ci>
+              </bvar>
+              <bvar>
+                <ci> A2 </ci>
+              </bvar>
+              <bvar>
+                <ci> c1 </ci>
+              </bvar>
+              <bvar>
+                <ci> c2 </ci>
+              </bvar>
+              <bvar>
+                <ci> c3 </ci>
+              </bvar>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <ci> c1 </ci>
+                    <apply>
+                      <times/>
+                      <ci> c3 </ci>
+                      <ci> A1 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> c2 </ci>
+                    <ci> A1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 2 </cn>
+                  <ci> c3 </ci>
+                  <ci> A2 </ci>
+                </apply>
+              </apply>
+            </lambda>
+          </math>
+        </functionDefinition>
+        <functionDefinition id="Rxn3" name="Rxn3">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <lambda>
+              <bvar>
+                <ci> A1 </ci>
+              </bvar>
+              <bvar>
+                <ci> A2 </ci>
+              </bvar>
+              <bvar>
+                <ci> A3 </ci>
+              </bvar>
+              <bvar>
+                <ci> c2 </ci>
+              </bvar>
+              <bvar>
+                <ci> c3 </ci>
+              </bvar>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <times/>
+                      <ci> c2 </ci>
+                      <ci> A1 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 2 </cn>
+                      <ci> c3 </ci>
+                      <ci> A2 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 1.8 </cn>
+                    <ci> c2 </ci>
+                    <ci> A2 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 3 </cn>
+                  <ci> c3 </ci>
+                  <ci> A3 </ci>
+                </apply>
+              </apply>
+            </lambda>
+          </math>
+        </functionDefinition>
+        <functionDefinition id="Rxn7" name="Rxn7">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <lambda>
+              <bvar>
+                <ci> A5 </ci>
+              </bvar>
+              <bvar>
+                <ci> A6 </ci>
+              </bvar>
+              <bvar>
+                <ci> A7 </ci>
+              </bvar>
+              <bvar>
+                <ci> c2 </ci>
+              </bvar>
+              <bvar>
+                <ci> c3 </ci>
+              </bvar>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <times/>
+                      <cn> 2.8 </cn>
+                      <ci> c2 </ci>
+                      <ci> A5 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 6 </cn>
+                      <ci> c3 </ci>
+                      <ci> A6 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 2.7 </cn>
+                    <ci> c2 </ci>
+                    <ci> A6 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 7 </cn>
+                  <ci> c3 </ci>
+                  <ci> A7 </ci>
+                </apply>
+              </apply>
+            </lambda>
+          </math>
+        </functionDefinition>
+        <functionDefinition id="Rxn10" name="Rxn10">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <lambda>
+              <bvar>
+                <ci> A10 </ci>
+              </bvar>
+              <bvar>
+                <ci> A8 </ci>
+              </bvar>
+              <bvar>
+                <ci> A9 </ci>
+              </bvar>
+              <bvar>
+                <ci> c2 </ci>
+              </bvar>
+              <bvar>
+                <ci> c3 </ci>
+              </bvar>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <times/>
+                      <cn> 1.8 </cn>
+                      <ci> c2 </ci>
+                      <ci> A8 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 9 </cn>
+                      <ci> c3 </ci>
+                      <ci> A9 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> c2 </ci>
+                    <ci> A9 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 10 </cn>
+                  <ci> c3 </ci>
+                  <ci> A10 </ci>
+                </apply>
+              </apply>
+            </lambda>
+          </math>
+        </functionDefinition>
+        <functionDefinition id="Rxn9" name="Rxn9">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <lambda>
+              <bvar>
+                <ci> A7 </ci>
+              </bvar>
+              <bvar>
+                <ci> A8 </ci>
+              </bvar>
+              <bvar>
+                <ci> A9 </ci>
+              </bvar>
+              <bvar>
+                <ci> c2 </ci>
+              </bvar>
+              <bvar>
+                <ci> c3 </ci>
+              </bvar>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <times/>
+                      <cn> 2.3 </cn>
+                      <ci> c2 </ci>
+                      <ci> A7 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 8 </cn>
+                      <ci> c3 </ci>
+                      <ci> A8 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 1.8 </cn>
+                    <ci> c2 </ci>
+                    <ci> A8 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 9 </cn>
+                  <ci> c3 </ci>
+                  <ci> A9 </ci>
+                </apply>
+              </apply>
+            </lambda>
+          </math>
+        </functionDefinition>
+        <functionDefinition id="Rxn8" name="Rxn8">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <lambda>
+              <bvar>
+                <ci> A6 </ci>
+              </bvar>
+              <bvar>
+                <ci> A7 </ci>
+              </bvar>
+              <bvar>
+                <ci> A8 </ci>
+              </bvar>
+              <bvar>
+                <ci> c2 </ci>
+              </bvar>
+              <bvar>
+                <ci> c3 </ci>
+              </bvar>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <times/>
+                      <cn> 2.7 </cn>
+                      <ci> c2 </ci>
+                      <ci> A6 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 7 </cn>
+                      <ci> c3 </ci>
+                      <ci> A7 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 2.3 </cn>
+                    <ci> c2 </ci>
+                    <ci> A7 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 8 </cn>
+                  <ci> c3 </ci>
+                  <ci> A8 </ci>
+                </apply>
+              </apply>
+            </lambda>
+          </math>
+        </functionDefinition>
+        <functionDefinition id="Rxn11" name="Rxn11">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <lambda>
+              <bvar>
+                <ci> A10 </ci>
+              </bvar>
+              <bvar>
+                <ci> A9 </ci>
+              </bvar>
+              <bvar>
+                <ci> c2 </ci>
+              </bvar>
+              <bvar>
+                <ci> c3 </ci>
+              </bvar>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> c2 </ci>
+                  <ci> A9 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> c3 </ci>
+                  <cn> 10 </cn>
+                  <ci> A10 </ci>
+                </apply>
+              </apply>
+            </lambda>
+          </math>
+        </functionDefinition>
+        <functionDefinition id="Rxn4" name="Rxn4">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <lambda>
+              <bvar>
+                <ci> A2 </ci>
+              </bvar>
+              <bvar>
+                <ci> A3 </ci>
+              </bvar>
+              <bvar>
+                <ci> A4 </ci>
+              </bvar>
+              <bvar>
+                <ci> c2 </ci>
+              </bvar>
+              <bvar>
+                <ci> c3 </ci>
+              </bvar>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <times/>
+                      <cn> 1.8 </cn>
+                      <ci> c2 </ci>
+                      <ci> A2 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 3 </cn>
+                      <ci> c3 </ci>
+                      <ci> A3 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 2.3 </cn>
+                    <ci> c2 </ci>
+                    <ci> A3 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 4 </cn>
+                  <ci> c3 </ci>
+                  <ci> A4 </ci>
+                </apply>
+              </apply>
+            </lambda>
+          </math>
+        </functionDefinition>
+        <functionDefinition id="Rxn5" name="Rxn5">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <lambda>
+              <bvar>
+                <ci> A3 </ci>
+              </bvar>
+              <bvar>
+                <ci> A4 </ci>
+              </bvar>
+              <bvar>
+                <ci> A5 </ci>
+              </bvar>
+              <bvar>
+                <ci> c2 </ci>
+              </bvar>
+              <bvar>
+                <ci> c3 </ci>
+              </bvar>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <times/>
+                      <cn> 2.3 </cn>
+                      <ci> c2 </ci>
+                      <ci> A3 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 4 </cn>
+                      <ci> c3 </ci>
+                      <ci> A4 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 2.7 </cn>
+                    <ci> c2 </ci>
+                    <ci> A4 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 5 </cn>
+                  <ci> c3 </ci>
+                  <ci> A5 </ci>
+                </apply>
+              </apply>
+            </lambda>
+          </math>
+        </functionDefinition>
+        <functionDefinition id="Rxn6" name="Rxn6">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <lambda>
+              <bvar>
+                <ci> A4 </ci>
+              </bvar>
+              <bvar>
+                <ci> A5 </ci>
+              </bvar>
+              <bvar>
+                <ci> A6 </ci>
+              </bvar>
+              <bvar>
+                <ci> c2 </ci>
+              </bvar>
+              <bvar>
+                <ci> c3 </ci>
+              </bvar>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <minus/>
+                    <apply>
+                      <times/>
+                      <cn> 2.7 </cn>
+                      <ci> c2 </ci>
+                      <ci> A4 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <cn> 5 </cn>
+                      <ci> c3 </ci>
+                      <ci> A5 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <cn> 2.8 </cn>
+                    <ci> c2 </ci>
+                    <ci> A5 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <cn> 6 </cn>
+                  <ci> c3 </ci>
+                  <ci> A6 </ci>
+                </apply>
+              </apply>
+            </lambda>
+          </math>
+        </functionDefinition>
+        <functionDefinition id="Rxn1" name="Rxn1">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <lambda>
+              <bvar>
+                <ci> A1 </ci>
+              </bvar>
+              <bvar>
+                <ci> c1 </ci>
+              </bvar>
+              <bvar>
+                <ci> c3 </ci>
+              </bvar>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <ci> c1 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> c3 </ci>
+                  <ci> A1 </ci>
+                </apply>
+              </apply>
+            </lambda>
+          </math>
+        </functionDefinition>
+      </listOfFunctionDefinitions>
+      <listOfUnitDefinitions>
+        <unitDefinition id="length" name="length">
+          <listOfUnits>
+            <unit kind="metre" exponent="1" scale="0" multiplier="1"/>
+          </listOfUnits>
+        </unitDefinition>
+        <unitDefinition id="area" name="area">
+          <listOfUnits>
+            <unit kind="metre" exponent="2" scale="0" multiplier="1"/>
+          </listOfUnits>
+        </unitDefinition>
+        <unitDefinition id="volume" name="volume">
+          <listOfUnits>
+            <unit kind="litre" exponent="1" scale="0" multiplier="1"/>
+          </listOfUnits>
+        </unitDefinition>
+        <unitDefinition id="time" name="time">
+          <listOfUnits>
+            <unit kind="second" exponent="1" scale="0" multiplier="1"/>
+          </listOfUnits>
+        </unitDefinition>
+        <unitDefinition id="substance" name="substance">
+          <listOfUnits>
+            <unit kind="mole" exponent="1" scale="-6" multiplier="1"/>
+          </listOfUnits>
+        </unitDefinition>
+      </listOfUnitDefinitions>
+      <listOfCompartments>
+        <compartment id="cell" name="cell" spatialDimensions="3" size="1" units="litre" constant="true"/>
+      </listOfCompartments>
+      <listOfSpecies>
+        <species id="Metabolite_9" name="Ca" compartment="cell" initialConcentration="0.01" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+        <species id="Metabolite_11" name="P0" compartment="cell" initialConcentration="10" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+        <species id="Metabolite_13" name="P1" compartment="cell" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+        <species id="Metabolite_15" name="P2" compartment="cell" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+        <species id="Metabolite_17" name="P3" compartment="cell" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+        <species id="Metabolite_19" name="P4" compartment="cell" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+        <species id="Metabolite_21" name="P5" compartment="cell" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+        <species id="Metabolite_23" name="P6" compartment="cell" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+        <species id="Metabolite_25" name="P7" compartment="cell" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+        <species id="Metabolite_27" name="P8" compartment="cell" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+        <species id="Metabolite_29" name="P9" compartment="cell" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+        <species id="Metabolite_31" name="P10" compartment="cell" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+        <species id="Metabolite_33" name="Ep" compartment="cell" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+        <species id="Metabolite_35" name="I" compartment="cell" initialConcentration="0" substanceUnits="mole" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="false"/>
+      </listOfSpecies>
+      <listOfParameters>
+        <parameter id="k1" name="k1" value="0.5" constant="true"/>
+        <parameter id="k2" name="k2" value="2" constant="true"/>
+        <parameter id="k3" name="k3" value="1" constant="true"/>
+        <parameter id="k4" name="k4" value="0.001" constant="true"/>
+        <parameter id="Km" name="Km" value="10" constant="true"/>
+        <parameter id="KHI" name="KHI" value="4" constant="true"/>
+        <parameter id="v1" name="v1" value="7.62939453065396e-020" constant="false"/>
+        <parameter id="v2" name="v2" value="0" constant="false"/>
+        <parameter id="v3" name="v3" value="0" constant="false"/>
+        <parameter id="sum" name="sum" value="0" constant="false"/>
+        <parameter id="ep0" name="ep0" value="0.01" constant="true"/>
+        <parameter id="I0" name="I0" value="0.1" constant="true"/>
+        <parameter id="Vcan" name="Vcan" value="1" constant="true"/>
+        <parameter id="Vpka" name="Vpka" value="1" constant="true"/>
+        <parameter id="KH2" name="KH2" value="0.6" constant="true"/>
+      </listOfParameters>
+      <listOfInitialAssignments>
+        <initialAssignment symbol="k4">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <cn> 1 </cn>
+              <apply>
+                <power/>
+                <cn> 10 </cn>
+                <apply>
+                  <minus/>
+                  <cn> 3 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </initialAssignment>
+      </listOfInitialAssignments>
+      <listOfRules>
+        <assignmentRule variable="v1">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <cn> 10 </cn>
+                <ci> k1 </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> Metabolite_9 </ci>
+                    <ci> KHI </ci>
+                  </apply>
+                  <cn> 8 </cn>
+                </apply>
+                <ci> Metabolite_11 </ci>
+              </apply>
+              <apply>
+                <power/>
+                <apply>
+                  <plus/>
+                  <cn> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> Metabolite_9 </ci>
+                      <ci> KHI </ci>
+                    </apply>
+                    <cn> 4 </cn>
+                  </apply>
+                </apply>
+                <cn> 2 </cn>
+              </apply>
+            </apply>
+          </math>
+        </assignmentRule>
+        <assignmentRule variable="sum">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <cn> 1 </cn>
+                <ci> Metabolite_13 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn> 2 </cn>
+                <ci> Metabolite_15 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn> 3 </cn>
+                <ci> Metabolite_17 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn> 4 </cn>
+                <ci> Metabolite_19 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn> 5 </cn>
+                <ci> Metabolite_21 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn> 6 </cn>
+                <ci> Metabolite_23 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn> 7 </cn>
+                <ci> Metabolite_25 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn> 8 </cn>
+                <ci> Metabolite_27 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn> 9 </cn>
+                <ci> Metabolite_29 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <cn> 10 </cn>
+                <ci> Metabolite_31 </ci>
+              </apply>
+            </apply>
+          </math>
+        </assignmentRule>
+        <assignmentRule variable="v3">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> k2 </ci>
+                <ci> Metabolite_33 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <ci> Km </ci>
+                <ci> sum </ci>
+              </apply>
+            </apply>
+          </math>
+        </assignmentRule>
+        <assignmentRule variable="v2">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> k1 </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> Metabolite_9 </ci>
+                    <ci> KHI </ci>
+                  </apply>
+                  <cn> 4 </cn>
+                </apply>
+                <ci> Metabolite_13 </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn> 1 </cn>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> Metabolite_9 </ci>
+                    <ci> KHI </ci>
+                  </apply>
+                  <cn> 4 </cn>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </assignmentRule>
+        <rateRule variable="Metabolite_33">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <plus/>
+              <apply>
+                <times/>
+                <apply>
+                  <minus/>
+                  <ci> k3 </ci>
+                </apply>
+                <ci> Metabolite_35 </ci>
+                <ci> Metabolite_33 </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> k4 </ci>
+                <apply>
+                  <minus/>
+                  <ci> ep0 </ci>
+                  <ci> Metabolite_33 </ci>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </rateRule>
+        <rateRule variable="Metabolite_35">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <times/>
+                  <apply>
+                    <minus/>
+                    <ci> k3 </ci>
+                  </apply>
+                  <ci> Metabolite_35 </ci>
+                  <ci> Metabolite_33 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> k4 </ci>
+                  <apply>
+                    <minus/>
+                    <ci> ep0 </ci>
+                    <ci> Metabolite_33 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> Vpka </ci>
+                  <ci> I0 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> Vcan </ci>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> Metabolite_9 </ci>
+                      <ci> KH2 </ci>
+                    </apply>
+                    <cn> 3 </cn>
+                  </apply>
+                  <ci> Metabolite_35 </ci>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn> 1 </cn>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <divide/>
+                      <ci> Metabolite_9 </ci>
+                      <ci> KH2 </ci>
+                    </apply>
+                    <cn> 3 </cn>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </math>
+        </rateRule>
+      </listOfRules>
+      <listOfReactions>
+        <reaction id="_1" name="1" reversible="false" fast="false">
+          <listOfProducts>
+            <speciesReference species="Metabolite_11" stoichiometry="1" constant="true"/>
+          </listOfProducts>
+          <listOfModifiers>
+            <modifierSpeciesReference species="Metabolite_13"/>
+          </listOfModifiers>
+          <kineticLaw>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <times/>
+                <ci> cell </ci>
+                <apply>
+                  <ci> Rxn1 </ci>
+                  <ci> Metabolite_13 </ci>
+                  <ci> v1 </ci>
+                  <ci> v3 </ci>
+                </apply>
+              </apply>
+            </math>
+          </kineticLaw>
+        </reaction>
+        <reaction id="_2" name="2" reversible="false" fast="false">
+          <listOfProducts>
+            <speciesReference species="Metabolite_13" stoichiometry="1" constant="true"/>
+          </listOfProducts>
+          <listOfModifiers>
+            <modifierSpeciesReference species="Metabolite_13"/>
+            <modifierSpeciesReference species="Metabolite_15"/>
+          </listOfModifiers>
+          <kineticLaw>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <times/>
+                <ci> cell </ci>
+                <apply>
+                  <ci> Rxn2 </ci>
+                  <ci> Metabolite_13 </ci>
+                  <ci> Metabolite_15 </ci>
+                  <ci> v1 </ci>
+                  <ci> v2 </ci>
+                  <ci> v3 </ci>
+                </apply>
+              </apply>
+            </math>
+          </kineticLaw>
+        </reaction>
+        <reaction id="_3" name="3" reversible="false" fast="false">
+          <listOfProducts>
+            <speciesReference species="Metabolite_15" stoichiometry="1" constant="true"/>
+          </listOfProducts>
+          <listOfModifiers>
+            <modifierSpeciesReference species="Metabolite_13"/>
+            <modifierSpeciesReference species="Metabolite_15"/>
+            <modifierSpeciesReference species="Metabolite_17"/>
+          </listOfModifiers>
+          <kineticLaw>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <times/>
+                <ci> cell </ci>
+                <apply>
+                  <ci> Rxn3 </ci>
+                  <ci> Metabolite_13 </ci>
+                  <ci> Metabolite_15 </ci>
+                  <ci> Metabolite_17 </ci>
+                  <ci> v2 </ci>
+                  <ci> v3 </ci>
+                </apply>
+              </apply>
+            </math>
+          </kineticLaw>
+        </reaction>
+        <reaction id="_4" name="4" reversible="false" fast="false">
+          <listOfProducts>
+            <speciesReference species="Metabolite_17" stoichiometry="1" constant="true"/>
+          </listOfProducts>
+          <listOfModifiers>
+            <modifierSpeciesReference species="Metabolite_15"/>
+            <modifierSpeciesReference species="Metabolite_17"/>
+            <modifierSpeciesReference species="Metabolite_19"/>
+          </listOfModifiers>
+          <kineticLaw>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <times/>
+                <ci> cell </ci>
+                <apply>
+                  <ci> Rxn4 </ci>
+                  <ci> Metabolite_15 </ci>
+                  <ci> Metabolite_17 </ci>
+                  <ci> Metabolite_19 </ci>
+                  <ci> v2 </ci>
+                  <ci> v3 </ci>
+                </apply>
+              </apply>
+            </math>
+          </kineticLaw>
+        </reaction>
+        <reaction id="_5" name="5" reversible="false" fast="false">
+          <listOfProducts>
+            <speciesReference species="Metabolite_19" stoichiometry="1" constant="true"/>
+          </listOfProducts>
+          <listOfModifiers>
+            <modifierSpeciesReference species="Metabolite_17"/>
+            <modifierSpeciesReference species="Metabolite_19"/>
+            <modifierSpeciesReference species="Metabolite_21"/>
+          </listOfModifiers>
+          <kineticLaw>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <times/>
+                <ci> cell </ci>
+                <apply>
+                  <ci> Rxn5 </ci>
+                  <ci> Metabolite_17 </ci>
+                  <ci> Metabolite_19 </ci>
+                  <ci> Metabolite_21 </ci>
+                  <ci> v2 </ci>
+                  <ci> v3 </ci>
+                </apply>
+              </apply>
+            </math>
+          </kineticLaw>
+        </reaction>
+        <reaction id="_6" name="6" reversible="false" fast="false">
+          <listOfProducts>
+            <speciesReference species="Metabolite_21" stoichiometry="1" constant="true"/>
+          </listOfProducts>
+          <listOfModifiers>
+            <modifierSpeciesReference species="Metabolite_19"/>
+            <modifierSpeciesReference species="Metabolite_21"/>
+            <modifierSpeciesReference species="Metabolite_23"/>
+          </listOfModifiers>
+          <kineticLaw>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <times/>
+                <ci> cell </ci>
+                <apply>
+                  <ci> Rxn6 </ci>
+                  <ci> Metabolite_19 </ci>
+                  <ci> Metabolite_21 </ci>
+                  <ci> Metabolite_23 </ci>
+                  <ci> v2 </ci>
+                  <ci> v3 </ci>
+                </apply>
+              </apply>
+            </math>
+          </kineticLaw>
+        </reaction>
+        <reaction id="_7" name="7" reversible="false" fast="false">
+          <listOfProducts>
+            <speciesReference species="Metabolite_23" stoichiometry="1" constant="true"/>
+          </listOfProducts>
+          <listOfModifiers>
+            <modifierSpeciesReference species="Metabolite_21"/>
+            <modifierSpeciesReference species="Metabolite_23"/>
+            <modifierSpeciesReference species="Metabolite_25"/>
+          </listOfModifiers>
+          <kineticLaw>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <times/>
+                <ci> cell </ci>
+                <apply>
+                  <ci> Rxn7 </ci>
+                  <ci> Metabolite_21 </ci>
+                  <ci> Metabolite_23 </ci>
+                  <ci> Metabolite_25 </ci>
+                  <ci> v2 </ci>
+                  <ci> v3 </ci>
+                </apply>
+              </apply>
+            </math>
+          </kineticLaw>
+        </reaction>
+        <reaction id="_8" name="8" reversible="false" fast="false">
+          <listOfProducts>
+            <speciesReference species="Metabolite_25" stoichiometry="1" constant="true"/>
+          </listOfProducts>
+          <listOfModifiers>
+            <modifierSpeciesReference species="Metabolite_23"/>
+            <modifierSpeciesReference species="Metabolite_25"/>
+            <modifierSpeciesReference species="Metabolite_27"/>
+          </listOfModifiers>
+          <kineticLaw>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <times/>
+                <ci> cell </ci>
+                <apply>
+                  <ci> Rxn8 </ci>
+                  <ci> Metabolite_23 </ci>
+                  <ci> Metabolite_25 </ci>
+                  <ci> Metabolite_27 </ci>
+                  <ci> v2 </ci>
+                  <ci> v3 </ci>
+                </apply>
+              </apply>
+            </math>
+          </kineticLaw>
+        </reaction>
+        <reaction id="_9" name="9" reversible="false" fast="false">
+          <listOfProducts>
+            <speciesReference species="Metabolite_27" stoichiometry="1" constant="true"/>
+          </listOfProducts>
+          <listOfModifiers>
+            <modifierSpeciesReference species="Metabolite_25"/>
+            <modifierSpeciesReference species="Metabolite_27"/>
+            <modifierSpeciesReference species="Metabolite_29"/>
+          </listOfModifiers>
+          <kineticLaw>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <times/>
+                <ci> cell </ci>
+                <apply>
+                  <ci> Rxn9 </ci>
+                  <ci> Metabolite_25 </ci>
+                  <ci> Metabolite_27 </ci>
+                  <ci> Metabolite_29 </ci>
+                  <ci> v2 </ci>
+                  <ci> v3 </ci>
+                </apply>
+              </apply>
+            </math>
+          </kineticLaw>
+        </reaction>
+        <reaction id="_10" name="10" reversible="false" fast="false">
+          <listOfProducts>
+            <speciesReference species="Metabolite_29" stoichiometry="1" constant="true"/>
+          </listOfProducts>
+          <listOfModifiers>
+            <modifierSpeciesReference species="Metabolite_31"/>
+            <modifierSpeciesReference species="Metabolite_27"/>
+            <modifierSpeciesReference species="Metabolite_29"/>
+          </listOfModifiers>
+          <kineticLaw>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <times/>
+                <ci> cell </ci>
+                <apply>
+                  <ci> Rxn10 </ci>
+                  <ci> Metabolite_31 </ci>
+                  <ci> Metabolite_27 </ci>
+                  <ci> Metabolite_29 </ci>
+                  <ci> v2 </ci>
+                  <ci> v3 </ci>
+                </apply>
+              </apply>
+            </math>
+          </kineticLaw>
+        </reaction>
+        <reaction id="_11" name="11" reversible="false" fast="false">
+          <listOfProducts>
+            <speciesReference species="Metabolite_31" stoichiometry="1" constant="true"/>
+          </listOfProducts>
+          <listOfModifiers>
+            <modifierSpeciesReference species="Metabolite_29"/>
+            <modifierSpeciesReference species="Metabolite_31"/>
+          </listOfModifiers>
+          <kineticLaw>
+            <math xmlns="http://www.w3.org/1998/Math/MathML">
+              <apply>
+                <times/>
+                <ci> cell </ci>
+                <apply>
+                  <ci> Rxn11 </ci>
+                  <ci> Metabolite_31 </ci>
+                  <ci> Metabolite_29 </ci>
+                  <ci> v2 </ci>
+                  <ci> v3 </ci>
+                </apply>
+              </apply>
+            </math>
+          </kineticLaw>
+        </reaction>
+      </listOfReactions>
+      <comp:listOfPorts>
+        <comp:port sboTerm="SBO:0000600" comp:idRef="Metabolite_9" comp:id="Ca" comp:name="Ca">
+          <annotation>
+            <jcmc:portInfo xmlns:jcmc="http://www.copasi.org/Projects/JigCell_Model_Connector" jcmc:refName="Ca" jcmc:pType="Input" jcmc:vType="Species"/>
+          </annotation>
+        </comp:port>
+        <comp:port sboTerm="SBO:0000601" comp:idRef="Metabolite_31" comp:id="P10" comp:name="P10">
+          <annotation>
+            <jcmc:portInfo xmlns:jcmc="http://www.copasi.org/Projects/JigCell_Model_Connector" jcmc:refName="P10" jcmc:pType="Output" jcmc:vType="Species"/>
+          </annotation>
+        </comp:port>
+      </comp:listOfPorts>
+    </comp:modelDefinition>
+  </comp:listOfModelDefinitions>
+</sbml>
